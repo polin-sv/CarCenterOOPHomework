@@ -1,32 +1,48 @@
-#include "main.h"
+#include "Car.h"
 
-class Car {
-public:
-	string brand;
-	string model;
-	string color;
-	int age;
-	double price;
-};
+Car* getExpensiveCar(Car** cars, int size) {
+	int index = 0;
 
+	for (int i = 1; i < size; i++)
+	{
+		if (cars[i]->price > (*(cars + index))->price) {
+			index = i;
+		}
+	}
+
+	return cars[index];
+}
 
 int main(void) {
-	Car car1;
+	Car* car1 = new Car;
+	Car* car2 = new Car;
+	Car* car3 = new Car;
 
-	cout << "input brand of your car: ";
-	cin >> car1.brand;
+	Car* cars[]{ car1,car2,car3 };
 
-	cout << "input model of your car: ";
-	cin >> car1.model;
+	car1->brand = "Ferrari";
+	car1->model = "296GTB";
+	car1->color = "red";
+	car1->age = 5;
+	car1->price = 330000;
 
-	cout << "input color of your car: ";
-	cin >> car1.color;
+	car2->brand = "Mercedes";
+	car2->model = "amg gt 63";
+	car2->color = "black";
+	car2->age = 8;
+	car2->price = 200000;
 
-	cout << "input age of your car: ";
-	cin >> car1.age;
+	car3->brand = "Porsche";
+	car3->model = "panamera gts";
+	car3->color = "grey";
+	car3->age = 2;
+	car3->price = 170000;
 
-	cout << "input price of your car: ";
-	cin >> car1.price;
+	cout << car1->toString() << endl;
+	cout << car2->toString() << endl;
+	cout << car3->toString() << endl;
+
+	cout << "the most expensive car is " << getExpensiveCar(cars, 3)->brand;
 
 	return 0;
 }
