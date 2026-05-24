@@ -24,6 +24,7 @@ public:
 		price = p;
 	}
 
+
 	Car(const Car& car) {
 		brand = car.brand;
 		model = car.model;
