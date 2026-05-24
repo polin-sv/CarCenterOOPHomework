@@ -14,29 +14,14 @@ Car* getExpensiveCar(Car** cars, int size) {
 }
 
 int main(void) {
-	Car* car1 = new Car;
-	Car* car2 = new Car;
-	Car* car3 = new Car;
+	Car* car1 = new Car("Ferrari", "296GTB", "red", 5, 330000);
+	Car* car2 = new Car("Mercedes", "amg gt 63", "black", 8, 200000);
+	Car* car3 = new Car("Porsche", "panamera gts", "grey", 2, 170000);
+	Car* car4 = new Car;
+
+	car4 = car2;
 
 	Car* cars[]{ car1,car2,car3 };
-
-	car1->brand = "Ferrari";
-	car1->model = "296GTB";
-	car1->color = "red";
-	car1->age = 5;
-	car1->price = 330000;
-
-	car2->brand = "Mercedes";
-	car2->model = "amg gt 63";
-	car2->color = "black";
-	car2->age = 8;
-	car2->price = 200000;
-
-	car3->brand = "Porsche";
-	car3->model = "panamera gts";
-	car3->color = "grey";
-	car3->age = 2;
-	car3->price = 170000;
 
 	cout << car1->toString() << endl;
 	cout << car2->toString() << endl;
