@@ -3,5 +3,8 @@
 class Van :
     public Transport
 {
+    Van();
+
+    Van(int price);
 };
 
