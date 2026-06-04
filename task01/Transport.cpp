@@ -13,7 +13,7 @@ int Transport::getPrice() {
 }
 
 void Transport::setPrice(int price) {
-	this->price = price > 0 ? price : 0;
+	this->price = (price > 0) ? price : 0;
 }
 
 string Transport::toString() {

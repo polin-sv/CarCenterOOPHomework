@@ -3,6 +3,7 @@
 class Bolid :
     public Transport
 {
+public:
     Bolid();
 
     Bolid(int price);

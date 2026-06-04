@@ -10,13 +10,10 @@ protected:
 	int price;
 public:
 	Transport();
-
 	Transport(int price);
 
 	int getPrice();
-
 	void setPrice(int price);
-
 	string toString();
 };
 

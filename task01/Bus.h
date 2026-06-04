@@ -1,10 +1,12 @@
-#pragma once
+
 #include "Transport.h"
 class Bus :
     public Transport
 {
-    Bus();
+public:
 
+    Bus();
+    
     Bus(int price);
 };
 
